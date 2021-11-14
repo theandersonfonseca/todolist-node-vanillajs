@@ -8,7 +8,7 @@ module.exports = {
 
       return response.status(200).json({ todos });
     } catch (error) {
-      response.status(500).json({ error: error.message });
+      return response.status(500).json({ error: error.message });
     }
   },
 
@@ -50,7 +50,7 @@ module.exports = {
         .status(200)
         .json({ message: 'Todo updated successfully' });
     } catch (error) {
-      response.status(500).json({ error: error.mensage });
+      return response.status(500).json({ error: error.mensage });
     }
   },
 
@@ -62,7 +62,7 @@ module.exports = {
         .status(200)
         .json({ message: 'Todo deleted successfully' });
     } catch (error) {
-      response.status(500).json({ error: error.mensage });
+      return response.status(500).json({ error: error.mensage });
     }
   },
 
@@ -80,7 +80,7 @@ module.exports = {
 
       return response.status(200).json({ message: responseMessage });
     } catch (error) {
-      response.status(500).json({ error: error.mensage });
+      return response.status(500).json({ error: error.mensage });
     }
   },
 };

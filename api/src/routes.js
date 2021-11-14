@@ -7,11 +7,11 @@ const TodoMiddleware = require('./middlewares/TodoMiddleware');
 routes.get('/todos', TodoController.index);
 routes.post('/todos', TodoController.store);
 
-routes.put('/todos/:id', TodoMiddleware.validadeId, TodoController.update);
-routes.delete('/todos/:id', TodoMiddleware.validadeId, TodoController.delete);
+routes.put('/todos/:id', TodoMiddleware.validateId, TodoController.update);
+routes.delete('/todos/:id', TodoMiddleware.validateId, TodoController.delete);
 routes.patch(
   '/todos/:id',
-  TodoMiddleware.validadeId,
+  TodoMiddleware.validateId,
   TodoController.updateTodoComplete
 );
 
