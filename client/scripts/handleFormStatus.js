@@ -8,7 +8,7 @@ function addFormStatusText(text) {
   }, 3000);
 }
 
-function addFormStatus(status) {
+function addFormStatus(status, text) {
   formMessage.classList.remove('error');
   formMessage.classList.remove('success');
 
@@ -19,9 +19,6 @@ function addFormStatus(status) {
   }
 
   formMessage.classList.add(status);
-
-  const text =
-    status === 'success' ? 'Todo Added Successfully.' : 'An error occurred.';
 
   addFormStatusText(text);
 }
