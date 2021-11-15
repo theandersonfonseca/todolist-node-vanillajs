@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
   font-size: 1.6rem;
   font-family: sans-serif;
   color: var(--dark-color);
@@ -95,4 +95,62 @@ body {
 
 .form-message.success {
   color: var(--success-color);
+}
+
+.todos {
+  margin-top: 8rem;
+  border-radius: 0.4rem;
+  border: solid 0.1rem lightgrey;
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  padding: 1.6rem;
+  border-bottom: solid 0.1rem lightgrey;
+}
+
+.complete {
+  width: 1.6rem;
+  height: 1.6rem;
+  border: solid 0.1rem lightgrey;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+.complete .check {
+  display: none;
+  color: var(--success-color);
+}
+
+.todo.completed .check {
+  display: block;
+}
+
+.description {
+  margin: 0 3.2rem;
+  flex: 1;
+}
+
+.todo.completed .description {
+  text-decoration: line-through;
+  color: lightgray;
+}
+
+.options {
+  margin-left: 0;
+}
+
+.edit,
+.remove {
+  cursor: pointer;
+}
+
+.edit {
+  color: var(--primary-color);
+}
+
+.remove {
+  margin-left: 1.6rem;
+  color: var(--error-color);
 }
