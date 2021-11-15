@@ -1,0 +1,94 @@
+:root {
+  --primary-color: #3dd3c0;
+  --white-color: #ffffff;
+  --dark-color: #333333;
+  --success-color: #28a745;
+  --error-color: #dc3545;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+  font-size: 1.6rem;
+  font-family: sans-serif;
+  color: var(--dark-color);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top {
+  width: 100%;
+  height: 17.5rem;
+  background: var(--primary-color);
+}
+
+.todolist {
+  height: 50rem;
+  margin-top: -6rem;
+}
+
+.form-todo {
+  padding: 1.6rem;
+  background: var(--white-color);
+  border-radius: 0.4rem;
+  box-shadow: 0 0.8rem 1rem lightgrey;
+}
+
+.label-todo {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 1.6rem;
+}
+
+.input-wrapper {
+  display: flex;
+}
+
+.input-todo {
+  padding: 0.5rem 1rem;
+  width: 50rem;
+  font-size: 1.6rem;
+  outline: 0;
+}
+
+.add-todo {
+  border: 0;
+  border-radius: 0.4rem;
+  padding: 0.5rem 1rem;
+  background: var(--primary-color);
+  color: var(--white-color);
+  cursor: pointer;
+  margin-left: 1.6rem;
+  text-transform: uppercase;
+}
+
+.add-todo:hover {
+  filter: grayscale(20%);
+}
+
+.form-message {
+  margin-top: 1.6rem;
+  font-size: 1.4rem;
+  height: 1.4rem;
+}
+
+.form-message.error {
+  color: var(--error-color);
+}
+
+.form-message.success {
+  color: var(--success-color);
+}
