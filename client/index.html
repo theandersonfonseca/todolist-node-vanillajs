@@ -5,8 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
-    <script src="./app.js" defer></script>
+    <script src="./scripts/app.js" type="module"></script>
     <title>Todo List</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="top"></div>
+
+      <main class="todolist">
+        <form class="form-todo" data-js="form-todo">
+          <label for="todo" class="label-todo">New Todo:</label>
+
+          <div class="input-wrapper">
+            <input
+              type="text"
+              id="todo"
+              class="input-todo"
+              data-js="input-todo"
+              autocomplete="off"
+            />
+
+            <button class="add-todo">Add</button>
+          </div>
+
+          <p class="form-message" data-js="form-message"></p>
+        </form>
+      </main>
+    </div>
+  </body>
 </html>
