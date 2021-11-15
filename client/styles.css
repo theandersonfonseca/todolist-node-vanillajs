@@ -37,7 +37,10 @@ body {
 
 .todolist {
   height: 50rem;
+  width: 100%;
+  max-width: 70rem;
   margin-top: -6rem;
+  padding: 0 1.6rem;
 }
 
 .form-todo {
@@ -55,11 +58,12 @@ body {
 
 .input-wrapper {
   display: flex;
+  justify-content: space-between;
 }
 
 .input-todo {
+  width: 100%;
   padding: 0.5rem 1rem;
-  width: 50rem;
   font-size: 1.6rem;
   outline: 0;
 }
