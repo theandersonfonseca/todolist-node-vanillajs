@@ -1,4 +1,5 @@
 import { addFormStatus } from './handleFormStatus.js';
+import { getTodos } from './getTodos.js';
 
 const api = 'http://localhost:3333/todos';
 
@@ -27,6 +28,7 @@ async function addTodo(event) {
     });
 
     addFormStatus('success', 'Todo Added Successfully.');
+    getTodos();
   } catch (error) {
     console.log(error);
 
