@@ -1,4 +1,5 @@
 import { createTodo } from './createTodo.js';
+import { addEventListeners } from './addEventListeners.js';
 
 const api = 'http://localhost:3333/todos';
 
@@ -14,6 +15,8 @@ async function getTodos() {
     todos.forEach((todo) => {
       todosContainer.appendChild(createTodo(todo));
     });
+
+    addEventListeners();
   } catch (error) {
     todosContainer.innerText = 'An error occurred';
   }
