@@ -1,12 +1,12 @@
-function createTodo({ _id, description, completed }) {
+function createTodo({ _id: id, description, completed }) {
   const todo = document.createElement('li');
   todo.classList.add('todo');
-  todo.setAttribute('data-js', _id);
+  todo.setAttribute('data-js', id);
 
   if (completed) todo.classList.add('completed');
 
   const todoContent = `
-    <span class="complete"><i class="check fas fa-check"></i></span>
+    <span class="complete" data-js="complete"><i class="check fas fa-check"></i></span>
 
     <p class="description">${description}</p>
 
