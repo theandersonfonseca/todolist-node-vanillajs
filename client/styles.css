@@ -43,14 +43,20 @@ body {
   padding: 0 1.6rem;
 }
 
-.form-todo {
+.form-todo,
+.form-edit {
   padding: 1.6rem;
   background: var(--white-color);
   border-radius: 0.4rem;
   box-shadow: 0 0.8rem 1rem lightgrey;
 }
 
-.label-todo {
+.form-edit {
+  display: none;
+}
+
+.label-todo,
+.label-edit {
   display: block;
   font-weight: 600;
   margin-bottom: 1.6rem;
@@ -61,14 +67,16 @@ body {
   justify-content: space-between;
 }
 
-.input-todo {
+.input-todo,
+.input-edit {
   width: 100%;
   padding: 0.5rem 1rem;
   font-size: 1.6rem;
   outline: 0;
 }
 
-.add-todo {
+.add-todo,
+.button-edit {
   border: 0;
   border-radius: 0.4rem;
   padding: 0.5rem 1rem;
@@ -77,6 +85,13 @@ body {
   cursor: pointer;
   margin-left: 1.6rem;
   text-transform: uppercase;
+}
+
+.button-edit {
+  background: var(--white-color);
+  border: solid 0.1rem var(--primary-color);
+  color: var(--primary-color);
+  font-weight: 600;
 }
 
 .add-todo:hover {
@@ -121,6 +136,7 @@ body {
 .complete .check {
   display: none;
   color: var(--success-color);
+  pointer-events: none;
 }
 
 .todo.completed .check {
