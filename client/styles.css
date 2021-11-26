@@ -85,6 +85,12 @@ body {
   cursor: pointer;
   margin-left: 1.6rem;
   text-transform: uppercase;
+  transition: 0.4s;
+}
+
+.button-edit:hover {
+  background: var(--primary-color);
+  color: var(--white-color);
 }
 
 .button-edit {
