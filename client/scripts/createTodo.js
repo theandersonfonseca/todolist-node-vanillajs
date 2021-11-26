@@ -11,7 +11,9 @@ function createTodo({ _id: id, description, completed }) {
     <p class="description">${description}</p>
 
     <div class="options">
-      <i class="edit fas fa-edit" data-js="edit-todo"></i>
+      ${
+        !completed ? '<i class="edit fas fa-edit" data-js="edit-todo"></i>' : ''
+      }
       <i class="remove fas fa-trash" data-js="remove-todo"></i>
     </div>
   `;
