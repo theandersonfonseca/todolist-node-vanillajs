@@ -76,7 +76,8 @@ body {
 }
 
 .add-todo,
-.button-edit {
+.button-edit,
+.button-cancel-edit {
   border: 0;
   border-radius: 0.4rem;
   padding: 0.5rem 1rem;
@@ -88,11 +89,6 @@ body {
   transition: 0.4s;
 }
 
-.button-edit:hover {
-  background: var(--primary-color);
-  color: var(--white-color);
-}
-
 .button-edit {
   background: var(--white-color);
   border: solid 0.1rem var(--primary-color);
@@ -100,7 +96,17 @@ body {
   font-weight: 600;
 }
 
-.add-todo:hover {
+.button-edit:hover {
+  background: var(--primary-color);
+  color: var(--white-color);
+}
+
+.button-cancel-edit {
+  background: var(--error-color);
+}
+
+.add-todo:hover,
+.button-cancel-edit:hover {
   filter: grayscale(20%);
 }
 

@@ -6,6 +6,9 @@ const api = 'http://localhost:3333/todos';
 const formTodo = document.querySelector('[data-js="form-todo"]');
 const formEdit = document.querySelector('[data-js="form-edit"]');
 const inputEdit = document.querySelector('[data-js="input-edit"]');
+const buttonCancelEdit = document.querySelector(
+  '[data-js="button-cancel-edit"]'
+);
 const buttonSaveEdit = document.querySelector('[data-js="button-edit"]');
 
 async function editTodo(id) {
@@ -17,6 +20,15 @@ async function editTodo(id) {
     .textContent.trim();
 
   inputEdit.focus();
+
+  buttonCancelEdit.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    formTodo.style.display = 'block';
+    formEdit.style.display = 'none';
+
+    return;
+  });
 
   buttonSaveEdit.addEventListener('click', async (event) => {
     event.preventDefault();
